@@ -2,7 +2,6 @@ gunicorn
 psycopg2
 cs50
 flask
-flask_session
 tempfile
 werkzeug
 os

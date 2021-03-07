@@ -4,4 +4,3 @@ cs50
 flask
 werkzeug
 requests
-urllib

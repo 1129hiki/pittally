@@ -2,7 +2,6 @@ gunicorn
 psycopg2
 cs50
 flask
-tempfile
 werkzeug
 os
 requests

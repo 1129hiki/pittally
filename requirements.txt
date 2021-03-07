@@ -3,3 +3,5 @@ psycopg2
 cs50
 flask
 werkzeug
+requests
+urllib

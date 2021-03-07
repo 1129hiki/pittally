@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 card" >
+            <ul>
+                <li>
+                    <p class="font-weight-bold">Username</p>
+                    <p class="wine-red">{{ user_info[0]["name"] }}</p>
+                </li>
+                <li>
+                    <p class="font-weight-bold">Email</p>
+                    <p class="wine-red">{{ user_info[0]["email"] }}</p>
+                </li>
+                <li>
+                    <p class="font-weight-bold">Usetype</p>
+                    <p class="wine-red">{{ user_info[0]["type"] }}</p>
+                </li>
+                <li>
+                    <p class="font-weight-bold">product/skill</p>
+                    <p class="wine-red">{{ user_info[0]["skill"] }}</p>
+                </li>
+                <li>
+                    <p class="font-weight-bold">description</p>
+                    <p class="wine-red">{{ user_info[0]["description"] }}</p>
+                </li>
+                <li>
+                    <p class="font-weight-bold">contact</p>
+                    <p class="wine-red"> {{ user_info[0]["contact"] }}</p>
+                </li>
+            </ul>
+               <a href="/register2" class="link">Edit profile</a>
+               <a href="/change-profile" class="link">Change email/username</a>
+               <a href="/change-password" class="link">Change Password</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

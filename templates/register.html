@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    REGISTER
+{% endblock %}
+
+{% block main %}
+<h5 style="margin-bottom: 30px;">Find new fellow and make a business!</h5>
+
+
+    <form name="myform" onsubmit="formValidate()" method="POST">
+            <div class="form-group">
+                <input class="form-control" name="username" placeholder="username" type="text">
+            </div>
+            <div class="form-group">
+                <input autocomplete="on" autofocus class="form-control" name="email" placeholder="email" type="email">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="password" type="password">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="confirmation" placeholder="password (confirm)" type="password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-red" type="submit">Next</button>
+            </div>
+    </form>
+
+
+    <ul class="error">
+    {% for i in range(message|length) %}
+        <li>{{ message[i] }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

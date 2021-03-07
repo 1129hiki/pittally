@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+    <form name="loginForm" method="POST">
+            <div class="form-group">
+                <input autocomplete="on" autofocus class="form-control" name="email" placeholder="email" type="email">
+            </div>
+            <div class="form-group">
+                <input class="form-control" name="password" placeholder="password" type="password">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-square-little-rich btn-red" type="submit">Login</button>
+            </div>
+    </form>
+
+
+    <ul class="error">
+    {% for i in range(message|length) %}
+    <li>{{ message[i] }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Match
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        {% for i in range(mutual_matches|length) %}
+        <div class="col-12 col-sm-6 col-md-4 card">
+            <ul>
+                <li class="username">{{ mutual_matches[i]["name"]}}</li>
+                <li class="skill">{{ mutual_matches[i]["skill"]}}</li>
+                <li class="description">{{ mutual_matches[i]["description"]}}</li>
+                <li class="contact">
+                    <details>
+                        <summary>Show Contact</summary>
+                        {{ mutual_matches[i]["contact"] }}
+                    </details>
+                </li>
+            </ul>
+            <form method="POST" >
+                <button name="unmatch" class="btn-square-little-rich btn-grey" value="{{ mutual_matches[i].id }}">Unlike</button>
+            </form>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

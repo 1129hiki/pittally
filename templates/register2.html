@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Your Information
+{% endblock %}
+
+{% block main %}
+    <form name="myform2" method="POST">
+        <div class="form-group cp_ipselect cp_sl01">
+            <select name="usertype" id="usertype" onchange="show_explain()">
+                <option disabled=true selected=true>Choose your role</option>
+                <option value="marketer">Marketer</option>
+                <option value="creator">Creator</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <p id="skill_exp" class="exp"></p>
+            <textarea class="medium-form" name="skill" type="text" placeholder="Your skill/product"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <p id="description_exp" class="exp"></p>
+            <textarea name="description" class="big-form" placeholder="Description" type="text"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+                <p class="exp">Your contact information</p>
+                <p class="small-grey">
+                This will be shared to user you have matched
+                <br>
+                (eg. link to your facebook, email, or phone number...)
+                </p>
+            <textarea name="contact" class="medium-form" placeholder="Contact information" type="text"></textarea>
+        </div>
+        <br>
+        <div class="form-group">
+            <button class="btn btn-red" type="submit">Submit</button>
+        </div>
+    </form>
+
+    <ul class="error">
+    {% for i in range(message|length) %}
+        <li>{{ message[i] }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+{% block script %}
+<script>
+function show_explain(){
+
+    // get value in option user have chosen (Marketer or creator)
+    var selected = document.getElementById("usertype").value;
+
+    // if usertype is marketer
+    if (selected == "marketer"){
+        document.getElementById("skill_exp").innerHTML = "How you can sell product? <p class='small-grey'>(eg. Web marketing using google analysis.)</p>";
+        document.getElementById("description_exp").innerHTML = "Detail on your skill";
+    }
+
+    // if usertype is creator
+    else{
+        document.getElementById("skill_exp").innerHTML = "What you want to sell? It could be anything. <p class='small-grey'>(eg. mobile app, book, clothing...)</p>";
+        document.getElementById("description_exp").innerHTML = "Detail on your product";
+        }
+}
+</script>
+
+{% endblock %}

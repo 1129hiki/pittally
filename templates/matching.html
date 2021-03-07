@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+
+
+<div class="container">
+    <div class="form-group keyword-search">
+    <form method="GET">
+        <input name="keyword" type="text" placeholder="keyword" autocomplete="off" class="form-control">
+        <button type="submit" class="btn btn-red">Search</button>
+    </form>
+    </div>
+
+
+    <div class="row">
+        {% for i in range(show_user|length) %}
+        <div class="col-12 col-sm-6 col-md-4 card">
+            <ul>
+                <li class="username">@{{ show_user[i]["name"]}}</li>
+                <li class="skill">{{ show_user[i]["skill"]}}</li>
+                <li class="description">{{ show_user[i]["description"]}}</li>
+            </ul>
+            <form method="POST">
+                <button name="match" class="btn-square-little-rich btn-red" value="{{ show_user[i].id }}">Like</button>
+                <button name="unmatch" class="btn-square-little-rich btn-grey" value="{{ show_user[i].id }}">Unlike</button>
+            </form>
+        </div>
+        {% endfor %}
+        {% endblock %}
+    </div>
+</div>
+

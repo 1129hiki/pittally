@@ -1,0 +1,194 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+   /* card */
+.card {
+  padding: 40px 10px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+.card ul{
+    list-style-type: none;
+    text-align: left;
+}
+
+.username{
+    color: #646363;
+}
+
+.skill{
+    font-size: 25px;
+}
+
+.description{
+    margin-bottom: 10px;
+}
+
+.btn-square-little-rich {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+.btn-square-little-rich:active {
+  /*押したとき*/
+  border: solid 1px white;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.btn-grey{
+  background: #787777;/*色*/
+  border: solid 1px grey;/*線色*/
+  color: white;
+}
+
+.btn-red{
+  background: #BD0404;/*色*/
+  border: solid 1px #BD0404;/*線色*/
+  color: white;
+}
+
+/* login and register page */
+
+.error li{
+    list-style-type: none;
+    text-align: center;
+}
+
+.exp {
+    font-size: 18px;
+}
+
+.small-grey{
+    font-size: 14px;
+    color: #585858;
+}
+
+.medium-form{
+    width: 300px;
+    height: 70px;
+    border: 1px solid #bbbbbb;
+}
+
+.big-form{
+    width: 300px;
+    height: 140px;
+    text-align: left;
+    border: 1px solid #bbbbbb;
+}
+
+/* select */
+.cp_ipselect {
+	overflow: hidden;
+	width: 300px;
+	margin: 2em auto;
+	text-align: center;
+}
+.cp_ipselect select {
+	width: 300px;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl01 {
+	position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+}
+
+/* profile */
+
+.wine-red{
+    color: #AD3A3A;
+}
+
+.link {
+    color: #595858;
+}
+
+
+.keyword-search{
+    margin-bottom: 50px;
+}

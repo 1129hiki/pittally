@@ -1,10 +1,10 @@
+import os
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
-
 from helpers import login_required
 
 # Configure application
@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
 
 # Loading database
-db = SQL("sqlite:///matching.db")
+db = SQL(os.getenv("postgres://nwpixgsnsyilqs:972d97a03e185e142f3c35bf09470c01b0f88862438d53f0f134d4af1b6dd45b@ec2-54-198-252-9.compute-1.amazonaws.com:5432/d2l8crq9s00n84"))
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True

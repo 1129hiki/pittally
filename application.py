@@ -10,8 +10,12 @@ from helpers import login_required
 # Configure application
 app = Flask(__name__)
 
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
 # Loading database
-db = SQL(os.getenv("postgres://nwpixgsnsyilqs:972d97a03e185e142f3c35bf09470c01b0f88862438d53f0f134d4af1b6dd45b@ec2-54-198-252-9.compute-1.amazonaws.com:5432/d2l8crq9s00n84"))
+db = SQL("sqlite:///matching.db")
 
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True

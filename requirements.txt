@@ -6,6 +6,4 @@ flask_session
 urllib
 tempfile
 werkzeug
-os
 requests
-urllib

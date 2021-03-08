@@ -15,9 +15,6 @@ app = Flask(__name__)
 if __name__ == '__main__':
     app.run(debug=True)
 
-
-db = SQL(os.environ.get("DATABASE_URL"))
-
 # Loading database
 db = SQL("sqlite:///matching.db")
 

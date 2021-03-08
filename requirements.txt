@@ -3,7 +3,5 @@ psycopg2
 cs50
 flask
 flask_session
-urllib
 tempfile
 werkzeug
-requests
